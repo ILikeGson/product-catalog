@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 251084
+    url: jdbc:postgresql://localhost:5432/catalog
+    platform: postgres
+    initialization-mode: never
+    continue-on-error: true
+    schema: classpath:sql/schema.sql
+    data: classpath:sql/data.sql
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+logging:
+  level:
+    root: info
+    org.springframework.web: info
+  pattern:
+    console: "%d %-5level %logger : %msg%n"

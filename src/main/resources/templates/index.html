@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+
+<div>
+    <div class="container my-2">
+        <h1>Product Management System</h1><br>
+        <form action="#" th:action="@{/product/find}" method="post">
+            <div>
+                <label>
+                    <button type="submit" class="btn btn-primary btn-sm mb-1">Find product by name</button>
+                    <input type="text" th:name="name" th:field="${product.name}" required="required">
+                </label>
+            </div>
+        </form>
+        <a th:href="@{/product/add}" class="btn btn-primary btn-sm mb-3">Add new product</a>
+    </div>
+</div>
+</body>
+</html>
